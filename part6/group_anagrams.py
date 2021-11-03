@@ -1,6 +1,5 @@
 import collections
 
-
 def groupAnangrams(s):
     anagrams = collections.defaultdict(list)
 

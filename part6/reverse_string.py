@@ -4,7 +4,6 @@ def my_reverse_string(s): # 내가 생각한 답
 def reverse_string(s):
     s.reverse() # reverse 는 리스트만
 
-
 if __name__ == '__main__':
     test = 'hello'
     test2 =['h','e','l','l','o']
