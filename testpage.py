@@ -1,7 +1,7 @@
-f1 = input()
-f2 = input()
-
-f1 = float(f1)
-f2 = float(f2)
-
-print(f1+f2)
+n1 , n2, n3 = input().split(" ")
+n1 = int(n1)
+n2 = int(n2)
+n3 = int(n3)
+sum = n1+n2+n3
+print(sum, end=" ")
+print("%.2f"%round(sum/2,2))
