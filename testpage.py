@@ -1,7 +1,6 @@
-n1 , n2, n3 = input().split(" ")
-n1 = int(n1)
-n2 = int(n2)
-n3 = int(n3)
-sum = n1+n2+n3
-print(sum, end=" ")
-print("%.2f"%round(sum/2,2))
+#문제 6073
+c = ord(input())
+a = ord('a')
+while c >= a:
+    print(chr(a),end= ' ')
+    a = a + 1
