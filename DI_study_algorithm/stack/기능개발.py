@@ -1,23 +1,3 @@
-def solution(progresses, speeds):
-    answer = []
-    total = len(progresses)
-    min = 0
-    count = 0
-    while len(progresses) > 0:
-        for i in range(total):
-            progresses[i] += speeds[i]
-
-        if progresses[0] >= 100:
-            count += 1
-            progresses.pop(0)
-            for i in range(min, total):
-                print(min)
-                if progresses[i] >= 100:
-                    count += 1
-            answer.append(count)
-            count = 0
-
-    return answer
 
 def solution1(progresses, speeds):
     answer = []
@@ -51,3 +31,23 @@ sp =[1, 1, 1, 1, 1, 1]
 
 
 print(solution1(pro,sp))
+
+
+def solution(progresses, speeds):
+    answer = []
+    time = 0
+    count = 0
+
+    while len(progresses) > 0:
+        if (progresses[0] + time * speeds[0]) >= 100:
+            progresses.pop(0)
+            speeds.pop(0)
+            count += 1
+
+        else:
+            if count > 0:
+                answer.append(count)
+                count = 0
+            time += 1
+    answer.append(count)
+    return answer
