@@ -37,3 +37,5 @@ def solution(operations):
 if __name__ == "__main__":
     operations = ["I 7","I 5","I -5","D -1"]
     print(solution(operations))
+
+#참고 힙의 경우 삽입만 할 경우 최솟값은 보장하지만 최댓값은 보장하지 않는다.
