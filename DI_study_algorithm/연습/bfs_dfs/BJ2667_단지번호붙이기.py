@@ -18,6 +18,7 @@ from collections import deque
 
 
 sum = []
+
 def bfs(x,y):
     if grahp[x][y] == 0:
         return False
@@ -27,6 +28,7 @@ def bfs(x,y):
     apt = 0
 
     c = 0
+
     while queue:
         c += 1
 
@@ -49,14 +51,17 @@ def bfs(x,y):
                 queue.append((dx,dy))
     if c == 1:
         sum.append(1)
+
     else:
         sum.append(apt)
+
     return True
 
 
 
 
 count = 0
+
 for i in range(N):
     for j in range(N):
        if True == bfs(i,j):

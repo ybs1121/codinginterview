@@ -6,7 +6,6 @@ N,M = map(int, input().split())
 rs = []
 chk = [False] * (N + 1)
 
-
 def recur(num):
     if num == M:
         print(" ".join(map(str,rs)))
@@ -17,6 +16,7 @@ def recur(num):
             chk[i] = True
             rs.append(i)
             recur(num+1)
+
             chk[i] = False
             rs.pop()
 

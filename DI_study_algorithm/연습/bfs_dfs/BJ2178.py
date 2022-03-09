@@ -10,8 +10,9 @@ dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
 # BFS 경로 탐색
 # queue 방식 사용
 queue = [(0,0)]
-visited[0][0] = 1
+visited[0][0] = 1 # 방문노드
 
+# map -> 경우의 수
 while queue:
     x, y = queue.pop(0)
 

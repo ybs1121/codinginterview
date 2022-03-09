@@ -3,6 +3,7 @@ import sys
 input = sys.stdin.readline
 
 N , M , V = map(int,input().split())
+
 graph = [list(map(int,input().split())) for _ in range(M)]
 edge = [[] for _ in range(N + 1)]
 graph.sort()

@@ -36,13 +36,10 @@ chk =[False for _ in range(V + 1)]
 
 
 
-#DFS 구현
-
 def dfs(chk, i, connect):
 
     if chk[i] == False:
         chk[i] = True
-
 
         for k in connect[i]:
             if chk[k] == False:
@@ -72,6 +69,7 @@ def bfs(chk, i, connect):
         k = queue.popleft()
         for c in connect[k]:
             if chk[c] == False:
+
                 chk[c] = True
                 result[0] += 1
                 queue.append(c)

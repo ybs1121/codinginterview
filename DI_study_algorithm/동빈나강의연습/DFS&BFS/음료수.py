@@ -21,22 +21,6 @@ for i in range(M):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from sys import stdin
 
 N, M  = map(int,input("입력 :").split(" "))
