@@ -23,3 +23,4 @@ def solution(numbers):
 if __name__ == "__main__":
     numbers = [6, 10, 2]
     print(solution(numbers))
+

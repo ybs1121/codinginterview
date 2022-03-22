@@ -51,6 +51,11 @@ print()
 bfs(visited,V,edge)
 
 
+target = 7
+list = [1,23,124,7,123,1,1,1,1,1]
+for i in range(10):
+    if list[i] == target:
+        print("Find")
 
 
 

@@ -1,30 +1,48 @@
+# import sys
+#
+# input = sys.stdin.readline
+#
+# N , M = map(int,input().split())
+#
+# no_listen = [input() for _  in range(N)]
+#
+# no_see = [input() for _  in range(M)]
+#
+# #
+# no_see_listen = []
+# for i in no_listen:
+#     if i in no_see:
+#         no_see_listen.append(i)
+#
+# print(len(no_see_listen))
+# no_see_listen.sort()
+#
+# for i in no_see_listen:
+#     print(i[:-2])
+
+
 import sys
 
 input = sys.stdin.readline
 
 N , M = map(int,input().split())
 
-name_list = []
+all_list = [input() for _  in range(N+M)]
 
-for i in range(N + M):
-    name_list.append(input())
+all_list.sort()
 
-no_listen = []
-for i in range(N):
-    no_listen.append(name_list[i])
+idx = 0
 
-no_see = []
-for i in range(M):
-    j = i + N
-    no_see.append(name_list[j])
-#
-no_see_listen = []
-for i in no_listen:
-    if i in no_see:
-        no_see_listen.append(i)
+result = []
 
-print(len(no_see_listen))
-no_see_listen.sort()
+while idx < N+M-1 :
+    if all_list[idx] == all_list[idx+1]:
+        result.append(all_list[idx])
+        idx += 2
+    else:
+        idx +=1
 
-for i in no_see_listen:
-    print(i[:-2])
+print(len(result))
+
+for i in result:
+    print(i[:-1])
