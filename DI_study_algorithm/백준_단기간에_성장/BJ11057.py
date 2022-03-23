@@ -28,4 +28,3 @@ for i in range(10**N):
 
 print(result%10007)
 
-
