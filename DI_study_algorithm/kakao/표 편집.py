@@ -8,7 +8,7 @@ def solution(n, k, cmd):
         original_table.append(i)
 
     for c in cmd:
-        print(k)
+
 
 
         if c[0] == "U":
@@ -31,7 +31,7 @@ def solution(n, k, cmd):
             recent_delete.append([tmp_key,table.pop(tmp_key)])
 
             if len(table) < k+1:
-                k = 0
+                k -= 1
 
 
 
