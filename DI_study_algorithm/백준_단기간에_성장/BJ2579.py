@@ -1,26 +1,17 @@
-import sys
-input = sys.stdin.readline
+N = int(input())
 
-x = int(input())
-stairway = []
+stair = [0]
+for _ in range(N):
+    stair.append(int(input()))
 
-for i in range(x):
-    tmp = int(input())
-    stairway.append(tmp)
-
-
-score = [0] * x
-
-if x == 1:
-    score[0] = stairway[0]
-elif x==2:
-    score[1] = score[0] + stairway[1]
+if N == 1:
+    print(stair[1])
 else:
-    score[0] = stairway[0]
-    score[1] = score[0] + stairway[1]
-    score[2] = max(stairway[1] + stairway[2], score[0] + stairway[2])
+    dp = [0] * (N+1)
+    dp[1] = stair[1]
+    dp[2] = stair[1] + stair[2]
 
-    for i in range(3,x):
-        score[i] = max(score[i-3] + stairway[i - 1] + stairway[i], score[i-2]+stairway[i])
+    for i in range(3, N+1):
+        dp[i] = max(dp[i-3]+stair[i-1]+stair[i], dp[i-2]+stair[i])
 
-print(score[-1])
+    print(dp[N])
