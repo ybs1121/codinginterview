@@ -23,3 +23,4 @@ print(idx)
 
 while True:
     for i in range(idx+1,end):
+        break
