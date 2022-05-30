@@ -10,16 +10,17 @@ print(maps)
 
 chk = set()
 answer = 0
-nx = [1, 0, -1, 0]
-ny = [0, 1, 0, -1]
+nx = [-1, 1, 0, 0]
+ny = [0, 0, 1, -1]
+
 def dfs(x,y,c):
     global answer
     answer = max(answer, c)
-
+    print(answer)
     for i in range(4):
         xx = x + nx[i]
         yy = y + ny[i]
-        if 0 <= xx < r and 0 <= yy < c and not maps[xx][yy] in chk:
+        if 0 <= xx < r and 0 <= yy < c and  maps[xx][yy] in chk:
             chk.add(maps[xx][yy])
             dfs(xx, yy, c+1)
             chk.remove(maps[xx][yy])
@@ -28,9 +29,8 @@ chk.add(maps[0][0])
 dfs(0,0,1)
 
 print("---------")
-
 print(answer)
-
+print("---------")
 
 
 
@@ -47,6 +47,7 @@ dy = [0, 0, -1, 1]
 def dfs(x, y, count):
     global ans
     ans = max(ans, count)
+    print(ans)
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
