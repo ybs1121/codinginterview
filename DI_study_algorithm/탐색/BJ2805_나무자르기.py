@@ -4,7 +4,7 @@ input = sys.stdin.readline
 n, m = map(int,input().split())
 tree = list(map(int,input().split()))
 
-start = min(tree)
+start = 1
 end = max(tree)
 
 while start < end:
@@ -16,10 +16,12 @@ while start < end:
         if cut > 0:
             tmp_sum += cut
 
-    if tmp_sum > m:
-        start = mid
+    if tmp_sum >= m:
+        start = mid + 1
 
-    elif tmp_sum < m:
-        end = mid
+    else:
+        end = mid - 1
+
+print(end)
 
 
