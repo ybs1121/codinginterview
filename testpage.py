@@ -1,9 +1,15 @@
+import collections
+def solution(s):
+    sH=collections.Counter(s)
+    print(sH)
+    for index, val in enumerate(s):
+        if sH[val]==1:
+            return index+1
+    return -1
 
-a = 1
 
-def sol(a,i):
-    a += i
-    print(a)
-
-for i in range(5):
-    sol(a,i)
+print(solution("softbananas"))#2
+print(solution("stringshowtime"))#3
+print(solution("showshowmine"))#9
+print(solution("statitsics"))#3
+print(solution("aabb"))#8
